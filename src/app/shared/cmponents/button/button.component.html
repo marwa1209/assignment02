@@ -1,3 +1,7 @@
-<button class="py-2 font-medium px-6 rounded-lg text-white bg-primary">
-  {{content}}
+<button class="py-2 font-medium px-6 rounded-lg text-white bg-primary flex justify-center items-center gap-2"
+  [ngClass]="{'w-full':fullWidth ,'!bg-transparent border border-[#E0E0E0] !text-black':isBordered}">
+  <span>{{ content }}</span>
+  <ng-container *ngIf="iconComponent">
+    <ng-container *ngComponentOutlet="iconComponent" [ngComponentOutletInjector]="iconInjector"></ng-container>
+  </ng-container>
 </button>

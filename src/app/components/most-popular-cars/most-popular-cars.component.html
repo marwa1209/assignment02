@@ -1,1 +1,7 @@
-<p>most-popular-cars works!</p>
+<div class="container ">
+  <app-search/>
+  <app-all-cars [Cars]="LimitedCars"/>
+  <div class="flex items-center justify-center mb-32" routerLink="/car-list">
+  <app-button content="Show all vehicles" [iconComponent]="appIconBlackArrow" [isBordered]="true" />
+</div>
+</div>

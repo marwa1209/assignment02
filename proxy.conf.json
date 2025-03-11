@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://freetestapi.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

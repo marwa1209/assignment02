@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "160px",
+      padding: "100px",
       screens: {},
     },
     extend: {
@@ -15,6 +15,7 @@ module.exports = {
         secondary: "#164573",
         "dark-gray": "#242424",
         "medium-dark-gray": "#484848",
+        "light-gray": "#959595"
 
       },
     },

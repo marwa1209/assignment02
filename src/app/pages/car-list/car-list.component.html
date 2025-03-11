@@ -1,1 +1,30 @@
-<p>car-list works!</p>
+<div class="container my-16">
+  <p class="text-[#959595] text-xl font-medium cursor-pointer" routerLink="/home">Home/<span routerLink="/car-list">
+      Cars</span></p>
+  <app-all-cars [Cars]="displayedCars" />
+  <!--pagination-->
+  <div *ngIf="!loading && totalPages>1" class="my-24 border flex items-center  border-gray-300 rounded-lg w-fit mx-auto ">
+    <button *ngIf="currentPage>1" class="py-2.5 px-4" [ngClass]="{'border-e border-e-gray-300':currentPage>1}"
+      (click)="prevPage()">
+      Previous
+    </button>
+    <div class="flex items-center justify-center text-center ">
+      <div *ngFor="let page of pages ">
+        <span (click)="goToPage(page)" class="py-2.5 px-4 border-e border-e-gray-300 mx-auto cursor-pointer"
+          [ngClass]="{'!border-e-0':page==totalPages}">{{page}}</span>
+      </div>
+    </div>
+    <button [ngClass]="{'border-s border-s-gray-300':currentPage!==totalPages}" class="py-2.5 px-4"
+      *ngIf="currentPage!==totalPages" (click)="nextPage()">
+      Next
+    </button>
+  </div>
+  <!-- Skeleton Loader -->
+<div *ngIf="loading" class="my-24 flex gap-2 justify-center mx-auto">
+  <div class="w-10 h-10 bg-gray-300 animate-pulse rounded-md"></div>
+  <div class="w-10 h-10 bg-gray-300 animate-pulse rounded-md"></div>
+  <div class="w-10 h-10 bg-gray-300 animate-pulse rounded-md"></div>
+  <div class="w-10 h-10 bg-gray-300 animate-pulse rounded-md"></div>
+</div>
+
+</div>
