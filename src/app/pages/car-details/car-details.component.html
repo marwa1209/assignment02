@@ -1,15 +1,14 @@
-
 <div class="mt-6 ">
   <span class="text-[#959595] text-xl font-medium cursor-pointer ps-5" routerLink="/home">Home/</span><span
     class="text-primary">
     {{car.model}} Details</span>
 </div>
-<div class="flex gap-9 items-center relative h-full ">
+<div class="flex flex-col lg:flex-row gap-9 items-center relative h-full container lg:px-0">
 
   <picture >
     <img src="/assets/images/cars/Audi 1.png" class="w-full h-auto object-contain" [alt]="car.make" />
 </picture>
-<div class="w-[35%]">
+<div class="lg:w-[35%]">
   <div class="mb-20">
   <app-text-box content="WHY CHOOSE US" [isCentered]="false" />
   <h2 class="text-4xl font-medium">We offer the best experience with our rental deals</h2>
@@ -20,7 +19,7 @@
 <li>{{feature}}</li>
 </ul>
 </div>
-    <div class="absolute bottom-0 start-0 ">
+    <div class="absolute bottom-0 start-0 hidden lg:block">
       <app-layer-2-icon />
     </div>
 </div>
