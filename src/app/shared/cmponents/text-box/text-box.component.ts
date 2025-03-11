@@ -5,5 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './text-box.component.html',
 })
 export class TextBoxComponent {
-@Input() content: string
+@Input() content: string;
+@Input() isCentered:boolean=true;
 }

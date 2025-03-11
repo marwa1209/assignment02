@@ -1,5 +1,9 @@
-<span class="text-[#959595] text-xl font-medium cursor-pointer ps-5 my-3" routerLink="/home">Home/</span><span class="text-primary">
-  {{car.model}} Details</span>
+
+<div class="mt-6 ">
+  <span class="text-[#959595] text-xl font-medium cursor-pointer ps-5" routerLink="/home">Home/</span><span
+    class="text-primary">
+    {{car.model}} Details</span>
+</div>
 <div class="flex gap-9 items-center relative h-full ">
 
   <picture >
@@ -7,7 +11,7 @@
 </picture>
 <div class="w-[35%]">
   <div class="mb-20">
-  <app-text-box content="WHY CHOOSE US"/>
+  <app-text-box content="WHY CHOOSE US" [isCentered]="false" />
   <h2 class="text-4xl font-medium">We offer the best experience with our rental deals</h2>
   <p class="my-1 text-sm ">model: <span class="text-primary">{{car.model}}</span></p>
   <p class="my-1 text-sm ">Price: <span class="text-primary">{{car.price |currency: 'USD'}}</span></p>
